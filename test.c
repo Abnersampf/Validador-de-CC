@@ -5,68 +5,68 @@ int main(){
   
     setlocale(LC_ALL, "Portuguese_Brazil");
 
-    // Vari�veis que v�o armazenar as informa��es necess�rias.
+    // Variáveis que vão armazenar as informaões necessárias.
 
     long long int cartao, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n1b, n2b, n3b, n4b, n5b, n6b, n7b, n8b, n9b, n10b, n11b, n12b, n13b, n14b, n15b, n16b, mastercard, dinners_club, discover1, discover2, jcb, american_express;
     int d1, d3, d5, d7, d9, d11, d13, d15, soma, resultado;
     char fim;
 
-    // Pede para o usu�rio digitar o n�mero do cart�o, em seguida l� esse n�mero e guarda na vari�vel "cartao".
+    // Pede para o usuário digitar o número do cartão, em seguida lê esse número e guarda na variável "cartao".
 
-    printf("\nDigite o n�mero do cart�o (sem espa�os): ");
+    printf("\nDigite o número do cartão (sem espaços): ");
     scanf("%lld", &cartao);
 
-    // Separa cada digito individualmente e guarda em sua respectiva vari�vel: digito 1 na vari�vel "n1", digito 2 na vari�vel "n2".
+    // Separa cada digito individualmente e guarda em sua respectiva variável: digito 1 na variável "n1", digito 2 na variável "n2".
 
     n1 = cartao / 1000000000000000; // Calcula qual o primeiro digito;
-    n1b = cartao; // N�mero do cart�o completo.
+    n1b = cartao; // Número do cartão completo.
 
-    n2 = (n1b - (n1 * 1000000000000000)) / 100000000000000; // Calcula qual o segundo d�gito;
-    n2b = cartao - (n1 * 1000000000000000); // N�mero do cart�o sem o primeiro d�gito.
+    n2 = (n1b - (n1 * 1000000000000000)) / 100000000000000; // Calcula qual o segundo dígito;
+    n2b = cartao - (n1 * 1000000000000000); // Número do cartão sem o primeiro dígito.
 
-    n3 = (n2b - (n2 * 100000000000000)) / 10000000000000; // Calcula qual o terceiro d�gito;
-    n3b = n2b - (n2 * 100000000000000); // N�mero do cart�o sem o segundo d�gito.
+    n3 = (n2b - (n2 * 100000000000000)) / 10000000000000; // Calcula qual o terceiro dígito;
+    n3b = n2b - (n2 * 100000000000000); // Número do cartão sem o segundo dígito.
 
-    n4 = (n3b - (n3 * 10000000000000)) / 1000000000000; // Calcula qual o quarto d�gito;
-    n4b = n3b - (n3 * 10000000000000); // N�mero do cart�o sem o terceiro d�gito.
+    n4 = (n3b - (n3 * 10000000000000)) / 1000000000000; // Calcula qual o quarto dígito;
+    n4b = n3b - (n3 * 10000000000000); // Número do cartão sem o terceiro dígito.
 
-    n5 = (n4b - (n4 * 1000000000000)) / 100000000000; // Calcula qual o quinto d�gito;
-    n5b = n4b - (n4 * 1000000000000); // N�mero do cart�o sem o quarto d�gito.
+    n5 = (n4b - (n4 * 1000000000000)) / 100000000000; // Calcula qual o quinto dígito;
+    n5b = n4b - (n4 * 1000000000000); // Número do cartão sem o quarto dígito.
 
-    n6 = (n5b - (n5 * 100000000000)) / 10000000000; // Calcula qual o sexto d�gito;
-    n6b = n5b - (n5 * 100000000000); // N�mero do cart�o sem o quinto d�gito.
+    n6 = (n5b - (n5 * 100000000000)) / 10000000000; // Calcula qual o sexto dígito;
+    n6b = n5b - (n5 * 100000000000); // Número do cartão sem o quinto dígito.
 
-    n7 = (n6b - (n6 * 10000000000)) / 1000000000; // Calcula qual o s�timo d�gito;
-    n7b = n6b - (n6 * 10000000000); // N�mero do cart�o sem o sexto d�gito.
+    n7 = (n6b - (n6 * 10000000000)) / 1000000000; // Calcula qual o sétimo dígito;
+    n7b = n6b - (n6 * 10000000000); // Número do cartão sem o sexto dígito.
 
-    n8 = (n7b - (n7 * 1000000000)) / 100000000; // Calcula qual o oitavo d�gito;
-    n8b = n7b - (n7 * 1000000000); // N�mero do cart�o sem o s�timo d�gito.
+    n8 = (n7b - (n7 * 1000000000)) / 100000000; // Calcula qual o oitavo dígito;
+    n8b = n7b - (n7 * 1000000000); // Número do cartão sem o sétimo dígito.
     
-    n9 = (n8b - (n8 * 100000000)) / 10000000; // Calcula qual o nono d�gito;
-    n9b = n8b - (n8 * 100000000); // N�mero do cart�o sem o oitavo d�gito.
+    n9 = (n8b - (n8 * 100000000)) / 10000000; // Calcula qual o nono dígito;
+    n9b = n8b - (n8 * 100000000); // Número do cartão sem o oitavo dígito.
 
-    n10 = (n9b - (n9 * 10000000)) / 1000000; // Calcula qual o d�cimo d�gito;
-    n10b = n9b - (n9 * 10000000); // N�mero do cart�o sem o nono d�gito.
+    n10 = (n9b - (n9 * 10000000)) / 1000000; // Calcula qual o décimo dígito;
+    n10b = n9b - (n9 * 10000000); // Número do cartão sem o nono dígito.
 
-    n11 = (n10b - (n10 * 1000000)) / 100000; // Calcula qual o d�cimo primeiro d�gito;
-    n11b = n10b - (n10 * 1000000); // N�mero do cart�o sem o d�cimo d�gito.
+    n11 = (n10b - (n10 * 1000000)) / 100000; // Calcula qual o décimo primeiro dígito;
+    n11b = n10b - (n10 * 1000000); // Número do cartão sem o décimo dígito.
 
-    n12 = (n11b - (n11 * 100000)) / 10000; // Calcula qual o d�cimo segundo d�gito;
-    n12b = n11b - (n11 * 100000); // N�mero do cart�o sem o d�cimo primeiro d�gito.
+    n12 = (n11b - (n11 * 100000)) / 10000; // Calcula qual o décimo segundo dígito;
+    n12b = n11b - (n11 * 100000); // Número do cartão sem o décimo primeiro dígito.
     
-    n13 = (n12b - (n12 * 10000)) / 1000; // Calcula qual o d�cimo terceiro d�gito;
-    n13b = n12b - (n12 * 10000); // N�mero do cart�o sem o d�cimo segundo d�gito.
+    n13 = (n12b - (n12 * 10000)) / 1000; // Calcula qual o décimo terceiro dígito;
+    n13b = n12b - (n12 * 10000); // Número do cartão sem o décimo segundo dígito.
 
-    n14 = (n13b - (n13 * 1000)) / 100; // Calcula qual o d�cimo quarto d�gito;
-    n14b = n13b - (n13 * 1000); // N�mero do cart�o sem o d�cimo terceiro d�gito.
+    n14 = (n13b - (n13 * 1000)) / 100; // Calcula qual o décimo quarto dígito;
+    n14b = n13b - (n13 * 1000); // Número do cartão sem o décimo terceiro dígito.
 
-    n15 = (n14b - (n14 * 100)) / 10; // Calcula qual o d�cimo quinto d�gito;
-    n15b = n14b - (n14 * 100); // N�mero do cart�o sem o d�cimo quarto d�gito.
+    n15 = (n14b - (n14 * 100)) / 10; // Calcula qual o décimo quinto dígito;
+    n15b = n14b - (n14 * 100); // Número do cartão sem o décimo quarto dígito.
     
-    n16 = (n15b - (n15 * 10)) / 1; // Calcula qual o d�cimo sexto d�gito;
-    n16b = n15b - (n15 * 10); // N�mero do cart�o sem o d�cimo quinto d�gito.
+    n16 = (n15b - (n15 * 10)) / 1; // Calcula qual o décimo sexto dígito;
+    n16b = n15b - (n15 * 10); // Número do cartão sem o décimo quinto dígito.
 
-    // Imprime cada d�gito separadamente.
+    // Imprime cada dígito separadamente.
 
     /*printf("\nn1 = %d", n1);
     printf("\nn2 = %d", n2);
@@ -85,7 +85,7 @@ int main(){
     printf("\nn15 = %d", n15);
     printf("\nn16 = %d", n16);*/
 
-    // Multiplica os 1�, 3�, 5�, 7�, 9�, 11�, 13�, 15� d�gitos por 2 (cada um deles)...e caso o resultado seja maior que 9, ocorre a soma dos dois d�gitos (do resultado) e o resultado dessa soma � atribu�do as vari�veis "d1, d3, d5...".
+    // Multiplica os 1º, 3º, 5º, 7º, 9º, 11º, 13º, 15º dºgitos por 2 (cada um deles)...e caso o resultado seja maior que 9, ocorre a soma dos dois dígitos (do resultado) e o resultado dessa soma é atribuído as variáveis "d1, d3, d5...".
 
     d1 = n1 * 2;
     if (d1 > 9){
@@ -146,11 +146,11 @@ int main(){
 
     }
 
-    // Faz a soma de todos os d�gitos (tanto dos qur foram multiplicados por 2 e est�o com seus novos valores, quanto os que n�o foram).
+    // Faz a soma de todos os dígitos (tanto dos qur foram multiplicados por 2 e estão com seus novos valores, quanto os que não foram).
 
     soma = d1 + n2 + d3 + n4 + d5 + n6 + d7 + n8 + d9 + n10 + d11 + n12 + d13 + n14 + d15 + n16;  
 
-    // Se o resultado dessa soma terminar com 0 � um cart�o v�lido, se n�o, n�o � v�lido.
+    // Se o resultado dessa soma terminar com 0 é um cartão válido, se não, não é válido.
 
     if (soma > 100){
 
@@ -164,18 +164,18 @@ int main(){
 
     }
 
-    mastercard = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro d�gitos do cart�o.
+    mastercard = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro dígitos do cartão.
 
-    dinners_club = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro d�gitos do cart�o.
+    dinners_club = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro dígitos do cartão.
 
-    discover1 = (cartao - n5b) / 1000000000000; // Deixa somente os 4 primeiro d�gitos do cart�o
-    discover2 = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro d�gitos do cart�o.
+    discover1 = (cartao - n5b) / 1000000000000; // Deixa somente os 4 primeiro dígitos do cartão
+    discover2 = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro dígitos do cartão.
 
-    jcb = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro d�gitos do cart�o.
+    jcb = (cartao - n3b) / 100000000000000; // Deixa somente os 2 primeiro dígitos do cartão.
 
-    american_express = (cartao - n4b) / 10000000000000; // Deixa somente os 2 primeiro d�gitos do cart�o.
+    american_express = (cartao - n4b) / 10000000000000; // Deixa somente os 2 primeiro dígitos do cartão.
 
-    // Identifica qual a marca (emissor) do cart�o com base nos primeiros d�gitos
+    // Identifica qual a marca (emissor) do cartão com base nos primeiros dígitos
 
     printf("---------------------------------------------------------");
 
@@ -245,16 +245,16 @@ int main(){
 
     }
 
-    // Verifica se o cart�o � v�lido, comparando o ultimo d�gito com 0.
+    // Verifica se o cartão é válido, comparando o ultimo dígito com 0.
 
     if (resultado == 0){
 
-        printf("\n\n\t\t  !!! CART�O V�LIDO !!!\n\n");
+        printf("\n\n\t\t  !!! CARTÃO VÁLIDO !!!\n\n");
 
     }
     else{
 
-        printf("\n\n\t\t  XXX CART�O INV�LIDO XXX\n\n");
+        printf("\n\n\t\t  XXX CARTÃO INVÁLIDO XXX\n\n");
 
     }
 
