@@ -16,3 +16,10 @@ IMAGENS DO PROGRAMA:
 <div>
   <img src="https://github.com/Abnersampf/Validador-de-CC/assets/58574013/e3817cdf-a33c-4178-82e8-b8af6d6b64d4" width="900px"/>
 </div>
+
+<br>
+
+- Caso o número seja inválido:
+<div>
+  <img src="https://github.com/Abnersampf/Validador-de-CC/assets/58574013/609f5120-8038-4cf6-9e6a-91a8a77ab5bf" width="900px"/>
+</div>
